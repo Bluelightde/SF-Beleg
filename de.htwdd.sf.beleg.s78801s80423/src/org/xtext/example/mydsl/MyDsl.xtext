@@ -1,0 +1,19 @@
+grammar org.xtext.example.mydsl.MyDsl with org.eclipse.xtext.common.Terminals
+
+generate myDsl "http://www.xtext.org/example/mydsl/MyDsl"
+	
+Greetings:
+	personlist += Rolle*;
+
+Rolle:
+	 'Als' Rolle=ID Ziel += Ziel+;
+	 
+Ziel:
+	 'möchte ich' Ziel=ID Nutzen += Nutzen+;
+	 
+Nutzen:
+	', um' Nutzen=ID '.'
+	;
+	
+
+
